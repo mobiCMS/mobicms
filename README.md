@@ -10,6 +10,8 @@ public sites. **LOCAL TEST ONLY!!!**
 [![CI-Analysis](https://github.com/mobicms/mobicms/workflows/Analysis/badge.svg)](https://github.com/mobicms/mobicms/actions/workflows/analysis.yml)
 [![CI-Security](https://github.com/mobicms/mobicms/workflows/Security/badge.svg)](https://github.com/mobicms/mobicms/actions/workflows/security.yml)
 [![CI-Tests](https://github.com/mobicms/mobicms/workflows/Tests/badge.svg)](https://github.com/mobicms/mobicms/actions/workflows/tests.yml)
+[![Sonar Coverage](https://img.shields.io/sonar/coverage/mobicms_mobicms?server=https%3A%2F%2Fsonarcloud.io)](https://sonarcloud.io/code?id=mobicms_mobicms)
+
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=mobicms_mobicms&metric=alert_status)](https://sonarcloud.io/summary/overall?id=mobicms_mobicms)
 
 
@@ -36,11 +38,10 @@ and [GIT](https://git-scm.com/) version control system.
 2. Assign the repository folder as Apache virtual host, or move contents to the previously created virtual host folder.
 3. Create MySQL Database.
 4. Import into the created database ALL files that are located in the `/install/sql` folder.
-5. Copy the `/config/autoload/db.local.php.dist` file to `/config/autoload/db.local.php`.
+5. Copy the `/config/config.local.php.dist` file to `/config/config.local.php`.
 6. Write in the copied file the credentials of access to the database you created.
-7. Copy the `/config/autoload/development.local.php.dist` file to `/config/autoload/development.local.php`.
-8. Open the console in the virtual host folder and install the dependencies using the command `composer install`.
-9. **This is all done**. If you go to the address of your virtual host from the browser, you should see a working site with demo data.
+7. Open the console in the virtual host folder and install the dependencies using the command `composer install`.
+8. **This is all done**. If you go to the address of your virtual host from the browser, you should see a working site with demo data.
 
 ## Contributing
 Contributions are welcome! Please read [CONTRIBUTING](https://github.com/mobicms/mobicms/blob/develop/.github/CONTRIBUTING.md) for details.
