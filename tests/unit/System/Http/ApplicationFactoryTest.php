@@ -19,9 +19,6 @@ use PHPUnit\Framework\TestCase;
 
 class ApplicationFactoryTest extends TestCase
 {
-    /**
-     * @var ApplicationFactory
-     */
     private ApplicationFactory $factory;
 
     public function setUp(): void
@@ -29,9 +26,6 @@ class ApplicationFactoryTest extends TestCase
         $this->factory = new ApplicationFactory();
     }
 
-    /**
-     * @return array
-     */
     public function debugDataProvider(): array
     {
         return [
@@ -42,7 +36,6 @@ class ApplicationFactoryTest extends TestCase
 
     /**
      * @dataProvider debugDataProvider
-     * @param bool $debug
      */
     public function testCreate(bool $debug): void
     {
@@ -68,9 +61,6 @@ class ApplicationFactoryTest extends TestCase
         ]));
     }
 
-    /**
-     * @return array
-     */
     public function invalidDependenciesDataProvider(): array
     {
         return [
@@ -91,7 +81,6 @@ class ApplicationFactoryTest extends TestCase
 
     /**
      * @dataProvider invalidDependenciesDataProvider
-     * @param array $dependencies
      */
     public function testCreateThrowNotFoundExceptionIfOneOfDependenciesIsNotSet(array $dependencies): void
     {

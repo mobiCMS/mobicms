@@ -15,9 +15,6 @@ use Psr\Log\LoggerInterface;
 
 class ErrorHandlerMiddlewareFactoryTest extends TestCase
 {
-    /**
-     * @var ErrorHandlerMiddlewareFactory
-     */
     private ErrorHandlerMiddlewareFactory $factory;
 
     public function setUp(): void
@@ -25,9 +22,6 @@ class ErrorHandlerMiddlewareFactoryTest extends TestCase
         $this->factory = new ErrorHandlerMiddlewareFactory();
     }
 
-    /**
-     * @return array
-     */
     public function debugDataProvider(): array
     {
         return [
@@ -38,7 +32,6 @@ class ErrorHandlerMiddlewareFactoryTest extends TestCase
 
     /**
      * @dataProvider debugDataProvider
-     * @param bool $debug
      */
     public function testCreate(bool $debug): void
     {

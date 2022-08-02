@@ -11,12 +11,6 @@ use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 
-/**
- * @psalm-suppress MissingConstructor
- * @psalm-suppress MixedMethodCall
- * @psalm-suppress PossiblyInvalidArgument
- * @psalm-suppress PossiblyUndefinedMethod
- */
 class IpAndUserAgentMiddlewareTest extends TestCase
 {
     private ServerRequestInterface|MockObject $request;

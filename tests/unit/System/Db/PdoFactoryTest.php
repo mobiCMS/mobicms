@@ -26,9 +26,6 @@ class PdoFactoryTest extends MysqlTestCase
             ->willReturn(true);
     }
 
-    /**
-     * @psalm-suppress InvalidArgument
-     */
     public function testFactoryReturnsInstanceOfPdo(): void
     {
         $this->container
@@ -50,9 +47,6 @@ class PdoFactoryTest extends MysqlTestCase
         $this->assertInstanceOf(PDO::class, $factory->create($this->container));
     }
 
-    /**
-     * @psalm-suppress InvalidArgument
-     */
     public function testInvalidPasswordThrowInvalidCredentialsException(): void
     {
         $this->container
@@ -74,9 +68,6 @@ class PdoFactoryTest extends MysqlTestCase
         (new PdoFactory())->create($this->container);
     }
 
-    /**
-     * @psalm-suppress InvalidArgument
-     */
     public function testInvalidUserThrowInvalidCredentialsException(): void
     {
         $this->container
@@ -98,9 +89,6 @@ class PdoFactoryTest extends MysqlTestCase
         (new PdoFactory())->create($this->container);
     }
 
-    /**
-     * @psalm-suppress InvalidArgument
-     */
     public function testInvalidDatabaseNameThrowInvalidDatabaseException(): void
     {
         $this->container
@@ -122,9 +110,6 @@ class PdoFactoryTest extends MysqlTestCase
         (new PdoFactory())->create($this->container);
     }
 
-    /**
-     * @psalm-suppress InvalidArgument
-     */
     public function testInvalidHostThrowUnableToConnectException(): void
     {
         $this->container
@@ -146,9 +131,6 @@ class PdoFactoryTest extends MysqlTestCase
         (new PdoFactory())->create($this->container);
     }
 
-    /**
-     * @psalm-suppress InvalidArgument
-     */
     public function testInvalidPortThrowUnableToConnectException(): void
     {
         $this->container
