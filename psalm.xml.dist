@@ -1,14 +1,11 @@
-<?xml version="1.0"?>
-<psalm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://getpsalm.org/schema/config" xsi:schemaLocation="https://getpsalm.org/schema/config system/vendor/vimeo/psalm/config.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<psalm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="https://getpsalm.org/schema/config"
+       xsi:schemaLocation="https://getpsalm.org/schema/config system/vendor/vimeo/psalm/config.xsd">
     <projectFiles>
         <directory name="system/src"/>
-        <directory name="tests"/>
         <ignoreFiles>
             <directory name="system/vendor"/>
         </ignoreFiles>
     </projectFiles>
-
-    <plugins>
-        <pluginClass class="Psalm\PhpUnitPlugin\Plugin"/>
-    </plugins>
 </psalm>
