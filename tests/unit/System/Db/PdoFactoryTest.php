@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace MobicmsTest\System\Db;
 
+use Mobicms\System\Db\Exception\CommonException;
 use Mobicms\System\Db\Exception\InvalidCredentialsException;
 use Mobicms\System\Db\Exception\InvalidDatabaseException;
-use Mobicms\System\Db\Exception\UnableToConnectException;
 use Mobicms\System\Db\PdoFactory;
 use Mobicms\Testutils\MysqlTestCase;
 use PDO;
@@ -142,7 +142,7 @@ class PdoFactoryTest extends MysqlTestCase
                 ]
             );
 
-        $this->expectException(UnableToConnectException::class);
+        $this->expectException(CommonException::class);
         (new PdoFactory())->create($this->container);
     }
 
@@ -166,7 +166,7 @@ class PdoFactoryTest extends MysqlTestCase
                 ]
             );
 
-        $this->expectException(UnableToConnectException::class);
+        $this->expectException(CommonException::class);
         (new PdoFactory())->create($this->container);
     }
 }

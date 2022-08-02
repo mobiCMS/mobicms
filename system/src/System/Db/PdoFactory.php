@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Mobicms\System\Db;
 
 use Devanych\Di\FactoryInterface;
+use Mobicms\System\Db\Exception\CommonException;
 use Mobicms\System\Db\Exception\InvalidDatabaseException;
 use Mobicms\System\Db\Exception\InvalidCredentialsException;
-use Mobicms\System\Db\Exception\UnableToConnectException;
 use PDO;
 use PDOException;
 use Psr\Container\ContainerInterface;
@@ -32,9 +32,9 @@ class PdoFactory implements FactoryInterface
             $code = (int) $exception->getCode();
 
             throw match ($code) {
-                1045 => new InvalidCredentialsException('Invalid database password', $code),
-                1049 => new InvalidDatabaseException('Invalid database credentials (user, password)', $code),
-                2002 => new UnableToConnectException('Unable to connect to the database server', $code)
+                1045 => new InvalidCredentialsException('Invalid database credentials (user, password)', $code),
+                1049 => new InvalidDatabaseException('Unknown database', $code),
+                default => new CommonException($exception->getMessage(), $code)
             };
         }
     }

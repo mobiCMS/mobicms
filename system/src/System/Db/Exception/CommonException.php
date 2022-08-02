@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Mobicms\System\Db\Exception;
 
-use PDOException;
+use RuntimeException;
 
-class UnableToConnectException extends PDOException
+class CommonException extends RuntimeException
 {
 }
