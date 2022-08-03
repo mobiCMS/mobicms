@@ -20,7 +20,12 @@ class PdoFactory implements FactoryInterface
 
         try {
             return new PDO(
-                $this->prepareDsn($config),
+                sprintf(
+                    'mysql:host=%s;port=%d;dbname=%s;charset=utf8mb4',
+                    (string) ($config['database']['host'] ?? 'localhost'),
+                    (int) ($config['database']['port'] ?? 3306),
+                    (string) ($config['database']['dbname'] ?? '')
+                ),
                 (string) ($config['database']['user'] ?? ''),
                 (string) ($config['database']['pass'] ?? ''),
                 [
@@ -37,19 +42,5 @@ class PdoFactory implements FactoryInterface
                 default => new CommonException($exception->getMessage(), $code)
             };
         }
-    }
-
-    private function prepareDsn(array $config): string
-    {
-        /** @var string $host */
-        $host = $config['database']['host'] ?? 'localhost';
-
-        /** @var int $port */
-        $port = $config['database']['port'] ?? 3306;
-
-        /** @var string $name */
-        $name = $config['database']['dbname'] ?? '';
-
-        return sprintf('mysql:host=%s;port=%d;dbname=%s;charset=utf8mb4', $host, $port, $name);
     }
 }
