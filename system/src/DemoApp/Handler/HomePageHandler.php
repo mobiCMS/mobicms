@@ -11,7 +11,6 @@ use PDO;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
-use Throwable;
 
 final class HomePageHandler implements RequestHandlerInterface
 {
@@ -25,7 +24,7 @@ final class HomePageHandler implements RequestHandlerInterface
     }
 
     /**
-     * @throws Throwable
+     * @throws \Throwable
      */
     public function handle(ServerRequestInterface $request): ResponseInterface
     {

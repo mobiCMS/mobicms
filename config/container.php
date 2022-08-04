@@ -5,7 +5,6 @@ declare(strict_types=1);
 use Devanych\Di\Container;
 use HttpSoft\Basis\Application;
 use HttpSoft\Basis\Response\CustomResponseFactory;
-use HttpSoft\Basis\TemplateRendererInterface;
 use HttpSoft\Cookie\CookieManager;
 use HttpSoft\Cookie\CookieManagerInterface;
 use HttpSoft\Emitter\EmitterInterface;
