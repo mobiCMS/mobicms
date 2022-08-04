@@ -8,6 +8,7 @@ return [
     'templates' => [
         'paths' => [
             'app'     => ['system/templates/app'],
+            'error' => ['system/templates/error'],
             'layouts' => ['system/templates/layouts'],
         ],
     ],

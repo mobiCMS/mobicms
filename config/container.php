@@ -48,6 +48,5 @@ return new Container(
         PDO::class                         => fn() => new PdoFactory(),
         ResponseFactoryInterface::class    => fn() => new CustomResponseFactory(),
         RouteCollector::class              => fn() => new RouteCollector(),
-        TemplateRendererInterface::class   => Renderer::class,
     ]
 );

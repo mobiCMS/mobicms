@@ -6,7 +6,7 @@ namespace Mobicms\System\Http;
 
 use Devanych\Di\FactoryInterface;
 use HttpSoft\Basis\Application;
-use HttpSoft\Basis\Handler\NotFoundJsonHandler;
+use HttpSoft\Basis\Handler\NotFoundHandler;
 use HttpSoft\Emitter\EmitterInterface;
 use HttpSoft\Router\RouteCollector;
 use HttpSoft\Runner\MiddlewarePipelineInterface;
@@ -16,6 +16,8 @@ use Psr\Container\{
     ContainerInterface,
     NotFoundExceptionInterface
 };
+use Mobicms\System\View\Renderer;
+use Psr\Http\Message\ResponseFactoryInterface;
 
 final class ApplicationFactory implements FactoryInterface
 {
@@ -34,7 +36,12 @@ final class ApplicationFactory implements FactoryInterface
             $container->get(EmitterInterface::class),
             $container->get(MiddlewarePipelineInterface::class),
             $container->get(MiddlewareResolverInterface::class),
-            new NotFoundJsonHandler($container->get('config')['debug'])
+            new NotFoundHandler(
+                $container->get(ResponseFactoryInterface::class),
+                $container->get(Renderer::class),
+                'error::404',
+                $container->get('config')['debug']
+            )
         );
     }
 }
