@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace MobicmsTest\System\View;
 
 use Mobicms\Render\Engine;
-use Mobicms\System\View\EngineFactory;
+use Mobicms\System\View\RendererFactory;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
 
@@ -34,7 +34,7 @@ class EngineFactoryTest extends TestCase
 
     public function testFactoryReturnsInstanceOfEngine(): Engine
     {
-        $engine = (new EngineFactory())->create($this->container);
+        $engine = (new RendererFactory())->create($this->container);
         $this->assertInstanceOf(Engine::class, $engine);
         return $engine;
     }

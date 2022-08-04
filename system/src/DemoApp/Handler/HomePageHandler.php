@@ -5,24 +5,28 @@ declare(strict_types=1);
 namespace Mobicms\DemoApp\Handler;
 
 use HttpSoft\Response\HtmlResponse;
-use Mobicms\Render\Engine;
 use Mobicms\System\Http\IpAndUserAgentMiddleware;
+use Mobicms\System\View\Renderer;
 use PDO;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
+use Throwable;
 
 final class HomePageHandler implements RequestHandlerInterface
 {
     private PDO $pdo;
-    private Engine $renderer;
+    private Renderer $renderer;
 
-    public function __construct(Engine $renderer, PDO $pdo)
+    public function __construct(Renderer $renderer, PDO $pdo)
     {
         $this->renderer = $renderer;
         $this->pdo = $pdo;
     }
 
+    /**
+     * @throws Throwable
+     */
     public function handle(ServerRequestInterface $request): ResponseInterface
     {
         $sever = $request->getServerParams();

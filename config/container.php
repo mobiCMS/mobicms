@@ -5,6 +5,7 @@ declare(strict_types=1);
 use Devanych\Di\Container;
 use HttpSoft\Basis\Application;
 use HttpSoft\Basis\Response\CustomResponseFactory;
+use HttpSoft\Basis\TemplateRendererInterface;
 use HttpSoft\Cookie\CookieManager;
 use HttpSoft\Cookie\CookieManagerInterface;
 use HttpSoft\Emitter\EmitterInterface;
@@ -15,12 +16,12 @@ use HttpSoft\Runner\MiddlewarePipeline;
 use HttpSoft\Runner\MiddlewarePipelineInterface;
 use HttpSoft\Runner\MiddlewareResolver;
 use HttpSoft\Runner\MiddlewareResolverInterface;
-use Mobicms\Render\Engine;
 use Mobicms\System\Db\PdoFactory;
 use Mobicms\System\Http\ApplicationFactory;
 use Mobicms\System\Http\ErrorHandlerMiddlewareFactory;
 use Mobicms\System\Log\LoggerFactory;
-use Mobicms\System\View\EngineFactory;
+use Mobicms\System\View\Renderer;
+use Mobicms\System\View\RendererFactory;
 use Psr\Container\ContainerInterface;
 use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Log\LoggerInterface;
@@ -39,7 +40,7 @@ return new Container(
         Application::class                 => fn() => new ApplicationFactory(),
         CookieManagerInterface::class      => fn() => new CookieManager(),
         EmitterInterface::class            => fn() => new SapiEmitter(),
-        Engine::class                      => fn() => new EngineFactory(),
+        Renderer::class                    => fn() => new RendererFactory(),
         ErrorHandlerMiddleware::class      => fn() => new ErrorHandlerMiddlewareFactory(),
         LoggerInterface::class             => fn() => new LoggerFactory(),
         MiddlewarePipelineInterface::class => fn() => new MiddlewarePipeline(),
@@ -47,5 +48,6 @@ return new Container(
         PDO::class                         => fn() => new PdoFactory(),
         ResponseFactoryInterface::class    => fn() => new CustomResponseFactory(),
         RouteCollector::class              => fn() => new RouteCollector(),
+        TemplateRendererInterface::class   => Renderer::class,
     ]
 );
