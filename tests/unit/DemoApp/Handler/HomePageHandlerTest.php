@@ -6,7 +6,7 @@ namespace MobicmsTest\DemoApp\Handler;
 
 use HttpSoft\Response\HtmlResponse;
 use Mobicms\DemoApp\Handler\HomePageHandler;
-use Mobicms\Render\Engine;
+use Mobicms\System\View\Renderer;
 use Mobicms\Testutils\MysqlTestCase;
 use Psr\Http\Message\ServerRequestInterface;
 
@@ -37,7 +37,7 @@ class HomePageHandlerTest extends MysqlTestCase
                 ]
             );
 
-        $renderer = $this->createMock(Engine::class);
+        $renderer = $this->createMock(Renderer::class);
         $renderer
             ->expects($this->once())
             ->method('render')
