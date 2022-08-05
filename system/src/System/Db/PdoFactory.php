@@ -16,18 +16,18 @@ class PdoFactory implements FactoryInterface
 {
     public function create(ContainerInterface $container): PDO
     {
-        $config = (array) $container->get('config');
+        $config = new Config((array) $container->get('config'));
 
         try {
             return new PDO(
                 sprintf(
                     'mysql:host=%s;port=%d;dbname=%s;charset=utf8mb4',
-                    (string) ($config['database']['host'] ?? 'localhost'),
-                    (int) ($config['database']['port'] ?? 3306),
-                    (string) ($config['database']['dbname'] ?? '')
+                    $config->host,
+                    $config->port,
+                    $config->dbname
                 ),
-                (string) ($config['database']['user'] ?? ''),
-                (string) ($config['database']['pass'] ?? ''),
+                $config->user,
+                $config->pass,
                 [
                     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
                     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
