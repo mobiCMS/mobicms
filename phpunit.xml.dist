@@ -12,7 +12,7 @@
          colors="true">
     <testsuites>
         <testsuite name="default">
-            <directory>tests</directory>
+            <directory>system/tests</directory>
         </testsuite>
     </testsuites>
 
