@@ -42,7 +42,6 @@
         "mobicms/system": "dev-main"
     },
     "require-dev": {
-        "filp/whoops": "^2.14",
         "mobicms/testutils": "dev-main",
         "phpunit/phpunit": "^9.5",
         "slevomat/coding-standard": "^8.3",
