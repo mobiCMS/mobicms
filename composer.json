@@ -38,7 +38,6 @@
         "ext-mbstring": "*",
         "devanych/di-container": "^2.1",
         "httpsoft/http-basis": "^1.0",
-        "monolog/monolog": "^2.8",
         "mobicms/render": "dev-main",
         "mobicms/system": "dev-main"
     },
