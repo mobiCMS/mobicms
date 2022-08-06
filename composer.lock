@@ -717,12 +717,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mobicms/system.git",
-                "reference": "62b8d7a9dd81e43bde0fa25e5204fdc3a82988ad"
+                "reference": "eaffa287717d0c0839fec02b42189859fae616b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mobicms/system/zipball/62b8d7a9dd81e43bde0fa25e5204fdc3a82988ad",
-                "reference": "62b8d7a9dd81e43bde0fa25e5204fdc3a82988ad",
+                "url": "https://api.github.com/repos/mobicms/system/zipball/eaffa287717d0c0839fec02b42189859fae616b0",
+                "reference": "eaffa287717d0c0839fec02b42189859fae616b0",
                 "shasum": ""
             },
             "require": {
@@ -776,7 +776,7 @@
                 "issues": "https://github.com/mobicms/system/issues",
                 "source": "https://github.com/mobicms/system"
             },
-            "time": "2022-08-06T11:23:30+00:00"
+            "time": "2022-08-06T11:32:26+00:00"
         },
         {
             "name": "monolog/monolog",
