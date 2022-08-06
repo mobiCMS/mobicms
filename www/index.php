@@ -12,11 +12,11 @@ chdir(dirname(__DIR__));
 require 'system/vendor/autoload.php';
 
 (function () {
-    $container = require_once 'config/container.php';
+    $container = require_once 'system/config/container.php';
     $app = $container->get(Application::class);
 
-    (require_once 'config/pipeline.php')($app);
-    (require_once 'config/routes.php')($app);
+    (require_once 'system/config/pipeline.php')($app);
+    (require_once 'system/config/routes.php')($app);
 
     $app->run(ServerRequestCreator::create());
 })();
