@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8788aaab15e5edbcdcc6c39443e27f9f",
+    "content-hash": "9b01579678d097bb922a4835f7a69f8d",
     "packages": [
         {
             "name": "devanych/di-container",
@@ -5191,7 +5191,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "mobicms/render": 20,
         "mobicms/system": 20,
         "mobicms/testutils": 20
     },
