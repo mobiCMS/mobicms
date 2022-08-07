@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Mobicms\DemoApp\Handler;
 
 use HttpSoft\Response\HtmlResponse;
-use Mobicms\System\Http\IpAndUserAgentMiddleware;
-use Mobicms\System\View\Renderer;
+use Mobicms\Render\Engine;
+use Mobicms\System\Middleware\IpAndUserAgentMiddleware;
 use PDO;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -15,9 +15,9 @@ use Psr\Http\Server\RequestHandlerInterface;
 final class HomePageHandler implements RequestHandlerInterface
 {
     private PDO $pdo;
-    private Renderer $renderer;
+    private Engine $renderer;
 
-    public function __construct(Renderer $renderer, PDO $pdo)
+    public function __construct(Engine $renderer, PDO $pdo)
     {
         $this->renderer = $renderer;
         $this->pdo = $pdo;
