@@ -788,12 +788,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mobicms/system.git",
-                "reference": "3bad567650e3371ab15855f069d40fddcf9b393d"
+                "reference": "21483484d09704f526e9731ec123c81f65de9a7f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mobicms/system/zipball/3bad567650e3371ab15855f069d40fddcf9b393d",
-                "reference": "3bad567650e3371ab15855f069d40fddcf9b393d",
+                "url": "https://api.github.com/repos/mobicms/system/zipball/21483484d09704f526e9731ec123c81f65de9a7f",
+                "reference": "21483484d09704f526e9731ec123c81f65de9a7f",
                 "shasum": ""
             },
             "require": {
@@ -803,14 +803,15 @@
                 "httpsoft/http-basis": "^1.0",
                 "mobicms/render": "dev-main",
                 "monolog/monolog": "^2.8",
-                "php": "~8.1.0"
+                "php": "~8.1.0",
+                "psr/container": "^1.1"
             },
             "require-dev": {
                 "mobicms/testutils": "dev-main",
                 "phpunit/phpunit": "^9.5",
                 "slevomat/coding-standard": "^7.2",
-                "squizlabs/php_codesniffer": "^3.6",
-                "vimeo/psalm": "^4.23"
+                "squizlabs/php_codesniffer": "^3.7",
+                "vimeo/psalm": "^4.26"
             },
             "default-branch": true,
             "type": "library",
@@ -848,7 +849,7 @@
                 "issues": "https://github.com/mobicms/system/issues",
                 "source": "https://github.com/mobicms/system"
             },
-            "time": "2022-08-06T11:46:36+00:00"
+            "time": "2022-08-06T14:07:29+00:00"
         },
         {
             "name": "monolog/monolog",
