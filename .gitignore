@@ -1,5 +1,6 @@
 /.idea
 /*.cache
+/composer.lock
 /phpunit.xml
 /results.sarif
 /system/config/config.local.php
