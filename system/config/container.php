@@ -18,7 +18,7 @@ use HttpSoft\Runner\MiddlewareResolverInterface;
 use Mobicms\Render\Engine;
 use Mobicms\System\Db\PdoFactory;
 use Mobicms\System\App\ApplicationFactory;
-use Mobicms\System\App\ErrorHandlerMiddlewareFactory;
+use Mobicms\System\Handler\ErrorHandlerMiddlewareFactory;
 use Mobicms\System\Log\LoggerFactory;
 use Mobicms\System\View\EngineFactory;
 use Psr\Container\ContainerInterface;
