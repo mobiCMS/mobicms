@@ -23,10 +23,10 @@
     </coverage>
 
     <php>
-        <const name="TEST_DB_HOST" value="127.0.0.1"/>
-        <const name="TEST_DB_PORT" value="3306"/>
-        <const name="TEST_DB_USER" value="root"/>
-        <const name="TEST_DB_PASS" value="root"/>
-        <const name="TEST_DB_NAME" value="tmp_test_database"/>
+        <var name="test_db_host" value="127.0.0.1"/>
+        <var name="test_db_port" value="3306"/>
+        <var name="test_db_user" value="root"/>
+        <var name="test_db_pass" value="root"/>
+        <var name="test_db_name" value="tmp_test_database"/>
     </php>
 </phpunit>
