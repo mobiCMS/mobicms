@@ -39,7 +39,7 @@
         "mobicms/system": "dev-main"
     },
     "require-dev": {
-        "mobicms/testutils": "dev-main",
+        "mobicms/testutils": "^1.0",
         "phpunit/phpunit": "^9.5",
         "slevomat/coding-standard": "^8.3",
         "squizlabs/php_codesniffer": "^3.7",
