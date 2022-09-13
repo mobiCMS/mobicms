@@ -10,6 +10,7 @@ use HttpSoft\ErrorHandler\ErrorHandlerMiddleware;
 use HttpSoft\Router\Middleware\RouteDispatchMiddleware;
 use HttpSoft\Router\Middleware\RouteMatchMiddleware;
 use Mobicms\System\Middleware\IpAndUserAgentMiddleware;
+use Mobicms\System\Session\SessionMiddleware;
 
 return function (Application $app): void {
     // You can remove unnecessary middleware, but it is not recommended to remove or reorder
@@ -18,6 +19,7 @@ return function (Application $app): void {
     // The error handler should be the very first middleware to catch all exceptions.
     $app->pipe(ErrorHandlerMiddleware::class);
     $app->pipe(IpAndUserAgentMiddleware::class);
+    $app->pipe(SessionMiddleware::class);
 
     // Sets the request header Content-Length if it was not set earlier and the request body was defined.
     $app->pipe(ContentLengthMiddleware::class);

@@ -9,6 +9,7 @@ declare(strict_types=1);
  * @var string $ip
  * @var string $ipViaProxy
  * @var string $userAgent
+ * @var string $session
  * @var array $psrattributes
  */
 
@@ -51,11 +52,18 @@ $notUsed = '<span class="badge rounded-pill bg-warning text-dark">DOES NOT EXIST
     </div>
 
     <div class="col-md-4 p-4">
-        <h3><i class="bi bi-broadcast"></i> Client IP and UserAgent</h3>
+        <h3><i class="bi bi-broadcast"></i> Environment</h3>
         <ul>
             <li><strong>IP:</strong> <?= $ip ?></li>
             <li><strong>IP via Proxy:</strong> <?= $ipViaProxy ?></li>
             <li><strong>UserAgent:</strong> <?= $userAgent ?></li>
+            <li>
+                <strong>Session:</strong> <?= $session ?><br>
+                <a href=".">home</a> |
+                <a href="?session=test-session">test-session</a> |
+                <a href="?session=another-test">another-test</a> |
+                <a href="?reset">reset</a>
+            </li>
         </ul>
     </div>
 
@@ -80,6 +88,7 @@ $notUsed = '<span class="badge rounded-pill bg-warning text-dark">DOES NOT EXIST
             <thead>
             <tr>
                 <th scope="col">Key</th>
+                <th scope="col">Type</th>
                 <th scope="col">Value</th>
             </tr>
             </thead>
@@ -87,9 +96,10 @@ $notUsed = '<span class="badge rounded-pill bg-warning text-dark">DOES NOT EXIST
             <?php foreach ($psrattributes as $key => $val): ?>
                 <tr>
                     <th scope="row"><?= $key ?></th>
-                    <td><?= $val ?></td>
+                    <td><?= $val[0] ?></td>
+                    <td><?= $val[1] ?></td>
                 </tr>
-            <?php endforeach; ?>
+            <?php endforeach ?>
             </tbody>
         </table>
     </div>

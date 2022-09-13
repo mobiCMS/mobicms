@@ -25,6 +25,8 @@ use Mobicms\System\{
     Config\ConfigInterface,
     ErrorHandler\ErrorHandlerMiddlewareFactory,
     Log\LoggerFactory,
+    Session\SessionMiddleware,
+    Session\SessionMiddlewareFactory,
     View\EngineFactory
 };
 use Psr\Container\ContainerInterface;
@@ -51,5 +53,6 @@ return new Container(
         PDO::class                         => fn() => new PdoFactory(),
         ResponseFactoryInterface::class    => fn() => new CustomResponseFactory(),
         RouteCollector::class              => fn() => new RouteCollector(),
+        SessionMiddleware::class           => fn() => new SessionMiddlewareFactory(),
     ]
 );
