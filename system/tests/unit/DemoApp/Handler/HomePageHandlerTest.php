@@ -6,11 +6,13 @@ namespace MobicmsTest\DemoApp\Handler;
 
 use HttpSoft\Response\HtmlResponse;
 use Mobicms\DemoApp\Handler\HomePageHandler;
-use Mobicms\Render\Engine;
-use Mobicms\System\Middleware\IpAndUserAgentMiddleware;
-use Mobicms\System\Session\SessionInterface;
-use Mobicms\Testutils\MysqlTestCase;
-use Mobicms\Testutils\SqlDumpLoader;
+use Mobicms\{
+    Render\Engine,
+    Middleware\IpAndUserAgentMiddleware,
+    Session\SessionInterface,
+    Testutils\MysqlTestCase,
+    Testutils\SqlDumpLoader
+};
 use Psr\Http\Message\ServerRequestInterface;
 
 class HomePageHandlerTest extends MysqlTestCase
