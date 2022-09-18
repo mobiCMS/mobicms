@@ -9,8 +9,10 @@ use HttpSoft\Cookie\CookieSendMiddleware;
 use HttpSoft\ErrorHandler\ErrorHandlerMiddleware;
 use HttpSoft\Router\Middleware\RouteDispatchMiddleware;
 use HttpSoft\Router\Middleware\RouteMatchMiddleware;
-use Mobicms\System\Middleware\IpAndUserAgentMiddleware;
-use Mobicms\System\Session\SessionMiddleware;
+use Mobicms\{
+    Middleware\IpAndUserAgentMiddleware,
+    Session\SessionMiddleware
+};
 
 return function (Application $app): void {
     // You can remove unnecessary middleware, but it is not recommended to remove or reorder
