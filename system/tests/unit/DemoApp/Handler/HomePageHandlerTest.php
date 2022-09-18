@@ -38,6 +38,12 @@ class HomePageHandlerTest extends MysqlTestCase
     private function mockRequest(): ServerRequestInterface
     {
         $request = $this->createMock(ServerRequestInterface::class);
+        $request->method('getQueryParams')->willReturn(
+            [
+                'session' => 'test-session',
+                'reset'   => '',
+            ]
+        );
         $request
             ->method('getAttribute')
             ->withConsecutive(
