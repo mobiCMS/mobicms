@@ -36,6 +36,7 @@
         "php": "~8.1.0",
         "ext-pdo": "*",
         "ext-mbstring": "*",
+        "mobicms/config": "dev-main",
         "mobicms/system": "dev-main"
     },
     "require-dev": {
