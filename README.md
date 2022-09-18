@@ -3,12 +3,11 @@
 mobiCMS Content Management System is in the early development stage and is not intended for installation on existing
 public sites. **LOCAL TEST ONLY!!!**
 
-[![GitHub](https://img.shields.io/github/license/mobicms/mobicms?color=green)](https://github.com/mobicms/mobicms/blob/develop/LICENSE)
+[![GitHub](https://img.shields.io/github/license/mobicms/mobicms?color=green)](https://github.com/mobicms/mobicms/blob/main/LICENSE)
 [![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/mobicms/mobicms)](https://github.com/mobicms/mobicms/releases)
 [![Packagist](https://img.shields.io/packagist/dt/mobicms/mobicms)](https://packagist.org/packages/mobicms/mobicms)
 
 [![CI-Analysis](https://github.com/mobicms/mobicms/workflows/Analysis/badge.svg)](https://github.com/mobicms/mobicms/actions/workflows/analysis.yml)
-[![CI-Security](https://github.com/mobicms/mobicms/workflows/Security/badge.svg)](https://github.com/mobicms/mobicms/actions/workflows/security.yml)
 [![CI-Tests](https://github.com/mobicms/mobicms/workflows/Tests/badge.svg)](https://github.com/mobicms/mobicms/actions/workflows/tests.yml)
 [![Sonar Coverage](https://img.shields.io/sonar/coverage/mobicms_mobicms?server=https%3A%2F%2Fsonarcloud.io)](https://sonarcloud.io/code?id=mobicms_mobicms)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=mobicms_mobicms&metric=alert_status)](https://sonarcloud.io/summary/overall?id=mobicms_mobicms)
@@ -43,9 +42,9 @@ and [GIT](https://git-scm.com/) version control system.
 8. **This is all done**. If you go to the address of your virtual host from the browser, you should see a working site with demo data.
 
 ## Contributing
-Contributions are welcome! Please read [CONTRIBUTING](https://github.com/mobicms/mobicms/blob/develop/.github/CONTRIBUTING.md) for details.
+Contributions are welcome! Please read [CONTRIBUTING][CONTRIBUTING] for details.
 
-This project adheres to a [Contributor Code of Conduct](https://github.com/mobicms/mobicms/blob/develop/.github/CODE_OF_CONDUCT.md).
+This project adheres to a [Contributor Code of Conduct][Code of Conduct].
 By participating in this project and its community, you are expected to uphold this code.
 
 [![YAGNI](https://img.shields.io/badge/principle-YAGNI-blueviolet.svg)](https://en.wikipedia.org/wiki/YAGNI)
@@ -57,7 +56,7 @@ The source code should not have extra unnecessary functionality and should be as
 
 ## License
 mobiCMS is licensed for use under the GNU General Public License v3.0 (GPL-3.0).  
-Please see [LICENSE](https://github.com/mobicms/mobicms/blob/develop/LICENSE) for more information.
+Please see [LICENSE][LICENSE] for more information.
 
 
 ## Copyright
@@ -69,3 +68,7 @@ All rights to used third-party libraries, fonts, images, etc. reserved by their 
 - [**mobiCMS Project**](https://mobicms.org) website and support forum
 - [**Facebook**](https://www.facebook.com/mobicms)
 - [**Twitter**](https://twitter.com/mobicms)
+
+[CONTRIBUTING]: https://github.com/mobicms/mobicms/blob/main/.github/CONTRIBUTING.md
+[Code of Conduct]: https://github.com/mobicms/mobicms/blob/main/.github/CODE_OF_CONDUCT.md
+[LICENSE]: https://github.com/mobicms/mobicms/blob/main/LICENSE
