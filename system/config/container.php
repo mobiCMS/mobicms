@@ -18,12 +18,11 @@ use HttpSoft\Runner\{
     MiddlewareResolverInterface
 };
 use Mobicms\Render\Engine;
-use Mobicms\{
-    App\ApplicationFactory,
+use Mobicms\{App\ApplicationFactory,
     Config\ConfigContainer,
-    Config\ConfigInterface,
     Db\PdoFactory,
     ErrorHandler\ErrorHandlerMiddlewareFactory,
+    Interface\ConfigInterface,
     Log\LoggerFactory,
     Session\SessionMiddleware,
     Session\SessionMiddlewareFactory,
