@@ -9,7 +9,7 @@ use Mobicms\DemoApp\Handler\HomePageHandler;
 use Mobicms\{
     Render\Engine,
     Middleware\IpAndUserAgentMiddleware,
-    Session\SessionInterface,
+    Interface\SessionInterface,
     Testutils\MysqlTestCase,
     Testutils\SqlDumpLoader
 };
