@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-use Devanych\Di\Container;
 use HttpSoft\Basis\Application;
 use HttpSoft\Basis\Response\CustomResponseFactory;
 use HttpSoft\Cookie\CookieManager;
@@ -11,23 +10,21 @@ use HttpSoft\Emitter\EmitterInterface;
 use HttpSoft\Emitter\SapiEmitter;
 use HttpSoft\ErrorHandler\ErrorHandlerMiddleware;
 use HttpSoft\Router\RouteCollector;
-use HttpSoft\Runner\{
-    MiddlewarePipeline,
-    MiddlewarePipelineInterface,
-    MiddlewareResolver,
-    MiddlewareResolverInterface
-};
+use HttpSoft\Runner\MiddlewarePipeline;
+use HttpSoft\Runner\MiddlewarePipelineInterface;
+use HttpSoft\Runner\MiddlewareResolver;
+use HttpSoft\Runner\MiddlewareResolverInterface;
+use Mobicms\Container\Container;
 use Mobicms\Render\Engine;
-use Mobicms\{App\ApplicationFactory,
-    Config\ConfigContainer,
-    Db\PdoFactory,
-    ErrorHandler\ErrorHandlerMiddlewareFactory,
-    Interface\ConfigInterface,
-    Log\LoggerFactory,
-    Session\SessionMiddleware,
-    Session\SessionMiddlewareFactory,
-    View\EngineFactory
-};
+use Mobicms\App\ApplicationFactory;
+use Mobicms\Config\ConfigContainer;
+use Mobicms\Db\PdoFactory;
+use Mobicms\ErrorHandler\ErrorHandlerMiddlewareFactory;
+use Mobicms\Interface\ConfigInterface;
+use Mobicms\Log\LoggerFactory;
+use Mobicms\Session\SessionMiddleware;
+use Mobicms\Session\SessionMiddlewareFactory;
+use Mobicms\View\EngineFactory;
 use Psr\Container\ContainerInterface;
 use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Log\LoggerInterface;
