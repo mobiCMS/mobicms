@@ -35,20 +35,20 @@ if (is_file(__DIR__ . '/config.local.php')) {
     $config = array_merge($config, require_once __DIR__ . '/config.local.php');
 }
 
-return new Container(
-    [
-        Application::class                 => fn() => new ApplicationFactory(),
-        ConfigInterface::class             => fn() => new ConfigContainer($config),
-        CookieManagerInterface::class      => fn() => new CookieManager(),
-        EmitterInterface::class            => fn() => new SapiEmitter(),
-        Engine::class                      => fn() => new EngineFactory(),
-        ErrorHandlerMiddleware::class      => fn() => new ErrorHandlerMiddlewareFactory(),
-        LoggerInterface::class             => fn() => new LoggerFactory(),
-        MiddlewarePipelineInterface::class => fn() => new MiddlewarePipeline(),
-        MiddlewareResolverInterface::class => fn(ContainerInterface $c) => new MiddlewareResolver($c),
-        PDO::class                         => fn() => new PdoFactory(),
-        ResponseFactoryInterface::class    => fn() => new CustomResponseFactory(),
-        RouteCollector::class              => fn() => new RouteCollector(),
-        SessionMiddleware::class           => fn() => new SessionMiddlewareFactory(),
-    ]
-);
+$container = new Container();
+
+$container->set(Application::class, fn() => new ApplicationFactory());
+$container->set(ConfigInterface::class, fn() => new ConfigContainer($config));
+$container->set(CookieManagerInterface::class, fn() => new CookieManager());
+$container->set(EmitterInterface::class, fn() => new SapiEmitter());
+$container->set(Engine::class, fn() => new EngineFactory());
+$container->set(ErrorHandlerMiddleware::class, fn() => new ErrorHandlerMiddlewareFactory());
+$container->set(LoggerInterface::class, fn() => new LoggerFactory());
+$container->set(MiddlewarePipelineInterface::class, fn() => new MiddlewarePipeline());
+$container->set(MiddlewareResolverInterface::class, fn(ContainerInterface $c) => new MiddlewareResolver($c));
+$container->set(PDO::class, fn() => new PdoFactory());
+$container->set(ResponseFactoryInterface::class, fn() => new CustomResponseFactory());
+$container->set(RouteCollector::class, fn() => new RouteCollector());
+$container->set(SessionMiddleware::class, fn() => new SessionMiddlewareFactory());
+
+return $container;
