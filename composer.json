@@ -37,6 +37,7 @@
         "ext-pdo": "*",
         "ext-mbstring": "*",
         "mobicms/config": "dev-main",
+        "mobicms/container": "dev-main",
         "mobicms/interface": "dev-main",
         "mobicms/system": "dev-main"
     },
