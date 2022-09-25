@@ -37,18 +37,19 @@ if (is_file(__DIR__ . '/config.local.php')) {
 
 $container = new Container();
 
-$container->set(Application::class, fn() => new ApplicationFactory());
+$container->setFactory(Application::class, ApplicationFactory::class);
+$container->setFactory(Engine::class, EngineFactory::class);
+$container->setFactory(LoggerInterface::class, LoggerFactory::class);
+$container->setFactory(PDO::class, PdoFactory::class);
+$container->setFactory(ErrorHandlerMiddleware::class, ErrorHandlerMiddlewareFactory::class);
+$container->setFactory(SessionMiddleware::class, SessionMiddlewareFactory::class);
+
 $container->set(ConfigInterface::class, fn() => new ConfigContainer($config));
 $container->set(CookieManagerInterface::class, fn() => new CookieManager());
 $container->set(EmitterInterface::class, fn() => new SapiEmitter());
-$container->set(Engine::class, fn() => new EngineFactory());
-$container->set(ErrorHandlerMiddleware::class, fn() => new ErrorHandlerMiddlewareFactory());
-$container->set(LoggerInterface::class, fn() => new LoggerFactory());
 $container->set(MiddlewarePipelineInterface::class, fn() => new MiddlewarePipeline());
-$container->set(MiddlewareResolverInterface::class, fn(ContainerInterface $c) => new MiddlewareResolver($c));
-$container->set(PDO::class, fn() => new PdoFactory());
-$container->set(ResponseFactoryInterface::class, fn() => new CustomResponseFactory());
 $container->set(RouteCollector::class, fn() => new RouteCollector());
-$container->set(SessionMiddleware::class, fn() => new SessionMiddlewareFactory());
+$container->set(MiddlewareResolverInterface::class, fn(ContainerInterface $c) => new MiddlewareResolver($c));
+$container->set(ResponseFactoryInterface::class, fn() => new CustomResponseFactory());
 
 return $container;
