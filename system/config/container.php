@@ -20,7 +20,7 @@ use Mobicms\App\ApplicationFactory;
 use Mobicms\Config\ConfigContainer;
 use Mobicms\Db\PdoFactory;
 use Mobicms\ErrorHandler\ErrorHandlerMiddlewareFactory;
-use Mobicms\Interface\ConfigInterface;
+use Mobicms\Config\ConfigInterface;
 use Mobicms\Log\LoggerFactory;
 use Mobicms\Session\SessionMiddleware;
 use Mobicms\Session\SessionMiddlewareFactory;
