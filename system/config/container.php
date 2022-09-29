@@ -35,21 +35,31 @@ if (is_file(__DIR__ . '/config.local.php')) {
     $config = array_merge($config, require_once __DIR__ . '/config.local.php');
 }
 
-$container = new Container();
-
-$container->setFactory(Application::class, ApplicationFactory::class);
-$container->setFactory(Engine::class, EngineFactory::class);
-$container->setFactory(LoggerInterface::class, LoggerFactory::class);
-$container->setFactory(PDO::class, PdoFactory::class);
-$container->setFactory(ErrorHandlerMiddleware::class, ErrorHandlerMiddlewareFactory::class);
-$container->setFactory(SessionMiddleware::class, SessionMiddlewareFactory::class);
-
-$container->set(ConfigInterface::class, fn() => new ConfigContainer($config));
-$container->set(CookieManagerInterface::class, fn() => new CookieManager());
-$container->set(EmitterInterface::class, fn() => new SapiEmitter());
-$container->set(MiddlewarePipelineInterface::class, fn() => new MiddlewarePipeline());
-$container->set(RouteCollector::class, fn() => new RouteCollector());
-$container->set(MiddlewareResolverInterface::class, fn(ContainerInterface $c) => new MiddlewareResolver($c));
-$container->set(ResponseFactoryInterface::class, fn() => new CustomResponseFactory());
+$container = new Container(
+    [
+        'services'    =>
+            [
+                ConfigInterface::class => new ConfigContainer($config),
+            ],
+        'factories'   =>
+            [
+                Application::class            => ApplicationFactory::class,
+                Engine::class                 => EngineFactory::class,
+                LoggerInterface::class        => LoggerFactory::class,
+                PDO::class                    => PdoFactory::class,
+                ErrorHandlerMiddleware::class => ErrorHandlerMiddlewareFactory::class,
+                SessionMiddleware::class      => SessionMiddlewareFactory::class,
+            ],
+        'definitions' =>
+            [
+                CookieManagerInterface::class      => fn() => new CookieManager(),
+                EmitterInterface::class            => fn() => new SapiEmitter(),
+                MiddlewarePipelineInterface::class => fn() => new MiddlewarePipeline(),
+                RouteCollector::class              => fn() => new RouteCollector(),
+                MiddlewareResolverInterface::class => fn(ContainerInterface $c) => new MiddlewareResolver($c),
+                ResponseFactoryInterface::class    => fn() => new CustomResponseFactory(),
+            ],
+    ]
+);
 
 return $container;
