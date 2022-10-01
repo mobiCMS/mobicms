@@ -37,27 +37,24 @@ if (is_file(__DIR__ . '/config.local.php')) {
 
 $container = new Container(
     [
-        'services'    =>
+        'services'  =>
             [
                 ConfigInterface::class => new ConfigContainer($config),
             ],
-        'factories'   =>
+        'factories' =>
             [
-                Application::class            => ApplicationFactory::class,
-                Engine::class                 => EngineFactory::class,
-                LoggerInterface::class        => LoggerFactory::class,
-                PDO::class                    => PdoFactory::class,
-                ErrorHandlerMiddleware::class => ErrorHandlerMiddlewareFactory::class,
-                SessionMiddleware::class      => SessionMiddlewareFactory::class,
-            ],
-        'definitions' =>
-            [
+                Application::class                 => ApplicationFactory::class,
                 CookieManagerInterface::class      => fn() => new CookieManager(),
                 EmitterInterface::class            => fn() => new SapiEmitter(),
+                Engine::class                      => EngineFactory::class,
+                ErrorHandlerMiddleware::class      => ErrorHandlerMiddlewareFactory::class,
+                LoggerInterface::class             => LoggerFactory::class,
                 MiddlewarePipelineInterface::class => fn() => new MiddlewarePipeline(),
-                RouteCollector::class              => fn() => new RouteCollector(),
                 MiddlewareResolverInterface::class => fn(ContainerInterface $c) => new MiddlewareResolver($c),
+                PDO::class                         => PdoFactory::class,
                 ResponseFactoryInterface::class    => fn() => new CustomResponseFactory(),
+                RouteCollector::class              => fn() => new RouteCollector(),
+                SessionMiddleware::class           => SessionMiddlewareFactory::class,
             ],
     ]
 );
