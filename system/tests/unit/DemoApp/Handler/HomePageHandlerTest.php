@@ -7,7 +7,7 @@ namespace MobicmsTest\DemoApp\Handler;
 use HttpSoft\Response\HtmlResponse;
 use Mobicms\DemoApp\Handler\HomePageHandler;
 use Mobicms\Render\Engine;
-use Mobicms\Middleware\IpAndUserAgentMiddleware;
+use Mobicms\Http\IpAndUserAgentMiddleware;
 use Mobicms\Session\SessionInterface;
 use Mobicms\Testutils\MysqlTestCase;
 use Mobicms\Testutils\SqlDumpLoader;
