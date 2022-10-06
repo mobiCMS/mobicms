@@ -27,7 +27,7 @@ Make sure your server meets the following requirements:
 
 
 ## Installation
-**To install the general availability version**, go to the [**project website**](https://mobicms.org) and download the latest available distributive.
+**To install the general availability version**, go to the [**project website**][website] and download the latest available distributive.
 Then follow the installation instructions that came with it.
 
 **To install the developer version**, you must have a [Composer](https://getcomposer.org) dependency manager
@@ -42,33 +42,31 @@ and [GIT](https://git-scm.com/) version control system.
 8. **This is all done**. If you go to the address of your virtual host from the browser, you should see a working site with demo data.
 
 ## Contributing
-Contributions are welcome! Please read [CONTRIBUTING][CONTRIBUTING] for details.
-
-This project adheres to a [Contributor Code of Conduct][Code of Conduct].
-By participating in this project and its community, you are expected to uphold this code.
+Contributions are welcome! Please read [CONTRIBUTING][contributing] for details.
 
 [![YAGNI](https://img.shields.io/badge/principle-YAGNI-blueviolet.svg)](https://en.wikipedia.org/wiki/YAGNI)
 [![KISS](https://img.shields.io/badge/principle-KISS-blueviolet.svg)](https://en.wikipedia.org/wiki/KISS_principle)
 
-In our development, we follow the principles of YAGNI and KISS.  
+In our development, we follow the principles of YAGNI and KISS.
 The source code should not have extra unnecessary functionality and should be as simple and efficient as possible.
 
 
 ## License
-mobiCMS is licensed for use under the GNU General Public License v3.0 (GPL-3.0).  
-Please see [LICENSE][LICENSE] for more information.
+This package is licensed for use under the GPL-3 License.  
+Please see [LICENSE][license] for more information.
 
 
 ## Copyright
-Copyright (c) 2021 [mobiCMS Project](https://mobicms.org).  
+Copyright (c) 2021 [mobiCMS Project][website].  
 All rights to used third-party libraries, fonts, images, etc. reserved by their authors.
 
 
 ## Our links
-- [**mobiCMS Project**](https://mobicms.org) website and support forum
-- [**Facebook**](https://www.facebook.com/mobicms)
+- [**mobiCMS Project**][website] website and support forum
+- [**GitHub**](https://github.com/mobicms) mobiCMS project repository
 - [**Twitter**](https://twitter.com/mobicms)
 
-[CONTRIBUTING]: https://github.com/mobicms/mobicms/blob/main/.github/CONTRIBUTING.md
-[Code of Conduct]: https://github.com/mobicms/mobicms/blob/main/.github/CODE_OF_CONDUCT.md
-[LICENSE]: https://github.com/mobicms/mobicms/blob/main/LICENSE
+[website]: https://mobicms.org
+[repository]: https://github.com/mobicms/mobicms
+[contributing]: https://github.com/mobicms/mobicms/blob/main/.github/CONTRIBUTING.md
+[license]: https://github.com/mobicms/system/blob/main/LICENSE
