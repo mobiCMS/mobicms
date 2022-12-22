@@ -5,7 +5,6 @@ public sites. **LOCAL TEST ONLY!!!**
 
 [![GitHub](https://img.shields.io/github/license/mobicms/mobicms?color=green)](https://github.com/mobicms/mobicms/blob/main/LICENSE)
 [![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/mobicms/mobicms)](https://github.com/mobicms/mobicms/releases)
-[![Packagist](https://img.shields.io/packagist/dt/mobicms/mobicms)](https://packagist.org/packages/mobicms/mobicms)
 
 [![CI-Analysis](https://github.com/mobicms/mobicms/workflows/Analysis/badge.svg)](https://github.com/mobicms/mobicms/actions/workflows/analysis.yml)
 [![CI-Tests](https://github.com/mobicms/mobicms/workflows/Tests/badge.svg)](https://github.com/mobicms/mobicms/actions/workflows/tests.yml)
@@ -18,7 +17,7 @@ public sites. **LOCAL TEST ONLY!!!**
 Make sure your server meets the following requirements:
 - Apache webserver
   - [mod_rewrite](https://httpd.apache.org/docs/2.4/mod/mod_rewrite.html)
-- PHP 8.0 or higher
+- PHP 8.2 or higher
   - [gd](https://www.php.net/manual/en/book.image.php)
   - [mbstring](https://www.php.net/manual/en/book.mbstring.php)
   - [pdo_mysql](https://www.php.net/manual/en/ref.pdo-mysql.php)
@@ -36,7 +35,7 @@ and [GIT](https://git-scm.com/) version control system.
 2. Assign the repository folder as Apache virtual host, or move contents to the previously created virtual host folder.
 3. Create MySQL Database.
 4. Import into the created database ALL files that are located in the `/install/sql` folder.
-5. Copy the `/config/config.local.php.dist` file to `/config/config.local.php`.
+5. Copy the `/system/config/config.local.php.dist` file to `/system/config/config.local.php`.
 6. Write in the copied file the credentials of access to the database you created.
 7. Open the console in the virtual host folder and install the dependencies using the command `composer install`.
 8. **This is all done**. If you go to the address of your virtual host from the browser, you should see a working site with demo data.
