@@ -38,8 +38,9 @@
     "require": {
         "php": "~8.2",
         "ext-mbstring": "*",
-        "ext-random": "*",
         "ext-pdo": "*",
+        "ext-random": "*",
+        "mobicms/container": "dev-main",
         "mobicms/system": "dev-main"
     },
     "require-dev": {
