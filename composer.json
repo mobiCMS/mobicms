@@ -40,7 +40,7 @@
         "ext-mbstring": "*",
         "ext-pdo": "*",
         "ext-random": "*",
-        "mobicms/container": "dev-main",
+        "mobicms/container": "^1.0",
         "mobicms/system": "dev-main"
     },
     "require-dev": {
