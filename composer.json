@@ -5,15 +5,14 @@
     "license": "GPL-3.0-only",
     "homepage": "https://mobicms.org",
     "keywords": [
-        "mobicms",
-        "cms"
+        "mobicms"
     ],
     "authors": [
         {
             "name": "Oleg Kasyanov",
-            "email": "oleg@batumi.org",
+            "role": "Team Lead, Developer",
             "homepage": "https://github.com/batumibiz",
-            "role": "Team Lead, Developer"
+            "email": "oleg@batumi.org"
         },
         {
             "name": "mobiCMS Contributors",
