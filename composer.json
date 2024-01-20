@@ -43,8 +43,6 @@
         "mobicms/system": "dev-main"
     },
     "require-dev": {
-        "mobicms/testutils": "^1.1",
-        "phpunit/phpunit": "^10.5",
         "slevomat/coding-standard": "^8.14",
         "squizlabs/php_codesniffer": "^3.8",
         "vimeo/psalm": "^5.20"
@@ -54,26 +52,15 @@
             "Mobicms\\": "system/src/"
         }
     },
-    "autoload-dev": {
-        "psr-4": {
-            "MobicmsTest\\": "system/tests/unit/"
-        }
-    },
     "scripts": {
         "check": [
             "@cs-check",
             "@static-analysis",
-            "@taint-analysis",
-            "@test"
+            "@taint-analysis"
         ],
         "cs-check": "phpcs",
         "cs-fix": "phpcbf",
         "static-analysis": "psalm --show-info=true",
-        "taint-analysis": "psalm --taint-analysis --show-info=true --report=results.sarif",
-        "test": "phpunit --colors=always",
-        "test-coverage": [
-            "@putenv XDEBUG_MODE=coverage",
-            "phpunit --colors=always --coverage-clover clover.xml --log-junit report.xml"
-        ]
+        "taint-analysis": "psalm --taint-analysis --show-info=true --report=results.sarif"
     }
 }

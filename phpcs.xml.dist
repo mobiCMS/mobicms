@@ -13,7 +13,6 @@
 
     <!-- Paths to check -->
     <file>system/src</file>
-    <file>system/tests</file>
 
     <!-- Generic rules -->
     <rule ref="PSR12"/>

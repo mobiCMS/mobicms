@@ -5,11 +5,7 @@ public sites. **LOCAL TEST ONLY!!!**
 
 [![GitHub](https://img.shields.io/github/license/mobicms/mobicms?color=green)](https://github.com/mobicms/mobicms/blob/main/LICENSE)
 [![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/mobicms/mobicms)](https://github.com/mobicms/mobicms/releases)
-
-[![CI-Analysis](https://github.com/mobicms/mobicms/workflows/Analysis/badge.svg)](https://github.com/mobicms/mobicms/actions/workflows/analysis.yml)
-[![CI-Tests](https://github.com/mobicms/mobicms/workflows/Tests/badge.svg)](https://github.com/mobicms/mobicms/actions/workflows/tests.yml)
-[![Sonar Coverage](https://img.shields.io/sonar/coverage/mobicms_mobicms?server=https%3A%2F%2Fsonarcloud.io)](https://sonarcloud.io/code?id=mobicms_mobicms)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=mobicms_mobicms&metric=alert_status)](https://sonarcloud.io/summary/overall?id=mobicms_mobicms)
+[![CI-Analysis](https://github.com/mobicms/mobicms/workflows/analysis/badge.svg)](https://github.com/mobicms/system/actions?query=workflow%3AAnalysis)
 
 
 ## System requirements
