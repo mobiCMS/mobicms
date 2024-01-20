@@ -3,7 +3,11 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xmlns="https://getpsalm.org/schema/config"
         xsi:schemaLocation="https://getpsalm.org/schema/config system/vendor/vimeo/psalm/config.xsd"
+        findUnusedBaselineEntry="true"
         findUnusedPsalmSuppress="true"
+        findUnusedVariablesAndParams="true"
+        findUnusedCode="true"
+        cacheDirectory=".cache"
 >
     <projectFiles>
         <directory name="system/src"/>
@@ -13,5 +17,14 @@
     </projectFiles>
 
     <issueHandlers>
+        <UnusedClass>
+            <errorLevel type="suppress">
+                <directory name="system/src/"/>
+            </errorLevel>
+        </UnusedClass>
     </issueHandlers>
+
+    <enableExtensions>
+        <extension name="random"/>
+    </enableExtensions>
 </psalm>
