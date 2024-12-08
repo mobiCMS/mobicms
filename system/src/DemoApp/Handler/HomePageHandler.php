@@ -68,6 +68,9 @@ final class HomePageHandler implements RequestHandlerInterface
         );
     }
 
+    /**
+     * @return array<string>
+     */
     private function pdoDemo(): array
     {
         $data = [];
@@ -80,6 +83,9 @@ final class HomePageHandler implements RequestHandlerInterface
         return $data;
     }
 
+    /**
+     * @return array<string>
+     */
     private function checkType(mixed $var): array
     {
         return match (true) {
